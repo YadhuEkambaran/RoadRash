@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D846F534235A16880060818F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846F533235A16880060818F /* AppDelegate.swift */; };
+		D846F536235A16880060818F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846F535235A16880060818F /* ViewController.swift */; };
+		D846F538235A168A0060818F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D846F537235A168A0060818F /* Assets.xcassets */; };
+		D846F53B235A168A0060818F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D846F539235A168A0060818F /* Main.storyboard */; };
+		D88613E2235DE60700128911 /* VehicleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88613E1235DE60700128911 /* VehicleButton.swift */; };
+		D8A60333235F2B8C00ADD1EF /* Motorcycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A60332235F2B8C00ADD1EF /* Motorcycle.swift */; };
+		D8A60336235F2BD600ADD1EF /* CarTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A60335235F2BD600ADD1EF /* CarTypes.swift */; };
+		D8A60339235F33D900ADD1EF /* Rally.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A60338235F33D900ADD1EF /* Rally.swift */; };
+		D8A6033C235F34CA00ADD1EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A6033B235F34CA00ADD1EF /* Constants.swift */; };
+		D8A60340235F3B4A00ADD1EF /* GrandPrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A6033F235F3B4A00ADD1EF /* GrandPrix.swift */; };
+		D8A60342235F47DA00ADD1EF /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A60341235F47DA00ADD1EF /* StartingViewController.swift */; };
+		D8CA9AED235B8B0200CCD8FB /* CarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA9AEC235B8B0200CCD8FB /* CarButton.swift */; };
+		D8CA9AF4235D41BE00CCD8FB /* OnVehicleFinishProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA9AF3235D41BE00CCD8FB /* OnVehicleFinishProtocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D846F530235A16880060818F /* RoadRash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadRash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D846F533235A16880060818F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D846F535235A16880060818F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D846F537235A168A0060818F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D846F53A235A168A0060818F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D846F53C235A168A0060818F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D846F53D235A168A0060818F /* RoadRash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RoadRash.entitlements; sourceTree = "<group>"; };
+		D88613E1235DE60700128911 /* VehicleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleButton.swift; sourceTree = "<group>"; };
+		D8A60332235F2B8C00ADD1EF /* Motorcycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motorcycle.swift; sourceTree = "<group>"; };
+		D8A60335235F2BD600ADD1EF /* CarTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTypes.swift; sourceTree = "<group>"; };
+		D8A60338235F33D900ADD1EF /* Rally.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rally.swift; sourceTree = "<group>"; };
+		D8A6033B235F34CA00ADD1EF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D8A6033F235F3B4A00ADD1EF /* GrandPrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrandPrix.swift; sourceTree = "<group>"; };
+		D8A60341235F47DA00ADD1EF /* StartingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
+		D8CA9AEC235B8B0200CCD8FB /* CarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarButton.swift; sourceTree = "<group>"; };
+		D8CA9AF3235D41BE00CCD8FB /* OnVehicleFinishProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnVehicleFinishProtocol.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D846F52D235A16880060818F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D846F527235A16880060818F = {
+			isa = PBXGroup;
+			children = (
+				D846F532235A16880060818F /* RoadRash */,
+				D846F531235A16880060818F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D846F531235A16880060818F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D846F530235A16880060818F /* RoadRash.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D846F532235A16880060818F /* RoadRash */ = {
+			isa = PBXGroup;
+			children = (
+				D8A6033A235F34B500ADD1EF /* common */,
+				D8A60337235F33C700ADD1EF /* rallies */,
+				D8A60334235F2BC000ADD1EF /* enums */,
+				D8CA9AE9235B8AAE00CCD8FB /* custom */,
+				D846F533235A16880060818F /* AppDelegate.swift */,
+				D846F535235A16880060818F /* ViewController.swift */,
+				D846F537235A168A0060818F /* Assets.xcassets */,
+				D846F539235A168A0060818F /* Main.storyboard */,
+				D846F53C235A168A0060818F /* Info.plist */,
+				D846F53D235A168A0060818F /* RoadRash.entitlements */,
+				D8A60341235F47DA00ADD1EF /* StartingViewController.swift */,
+			);
+			path = RoadRash;
+			sourceTree = "<group>";
+		};
+		D8A60334235F2BC000ADD1EF /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				D8A60335235F2BD600ADD1EF /* CarTypes.swift */,
+			);
+			path = enums;
+			sourceTree = "<group>";
+		};
+		D8A60337235F33C700ADD1EF /* rallies */ = {
+			isa = PBXGroup;
+			children = (
+				D8A60338235F33D900ADD1EF /* Rally.swift */,
+				D8A6033F235F3B4A00ADD1EF /* GrandPrix.swift */,
+			);
+			path = rallies;
+			sourceTree = "<group>";
+		};
+		D8A6033A235F34B500ADD1EF /* common */ = {
+			isa = PBXGroup;
+			children = (
+				D8A6033B235F34CA00ADD1EF /* Constants.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		D8CA9AE9235B8AAE00CCD8FB /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				D8CA9AEE235D403800CCD8FB /* protocols */,
+				D8CA9AEC235B8B0200CCD8FB /* CarButton.swift */,
+				D88613E1235DE60700128911 /* VehicleButton.swift */,
+				D8A60332235F2B8C00ADD1EF /* Motorcycle.swift */,
+			);
+			path = custom;
+			sourceTree = "<group>";
+		};
+		D8CA9AEE235D403800CCD8FB /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D8CA9AF3235D41BE00CCD8FB /* OnVehicleFinishProtocol.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D846F52F235A16880060818F /* RoadRash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D846F540235A168A0060818F /* Build configuration list for PBXNativeTarget "RoadRash" */;
+			buildPhases = (
+				D846F52C235A16880060818F /* Sources */,
+				D846F52D235A16880060818F /* Frameworks */,
+				D846F52E235A16880060818F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoadRash;
+			productName = RoadRash;
+			productReference = D846F530235A16880060818F /* RoadRash.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D846F528235A16880060818F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = AYA;
+				TargetAttributes = {
+					D846F52F235A16880060818F = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = D846F52B235A16880060818F /* Build configuration list for PBXProject "RoadRash" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D846F527235A16880060818F;
+			productRefGroup = D846F531235A16880060818F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D846F52F235A16880060818F /* RoadRash */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D846F52E235A16880060818F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D846F538235A168A0060818F /* Assets.xcassets in Resources */,
+				D846F53B235A168A0060818F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D846F52C235A16880060818F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8CA9AF4235D41BE00CCD8FB /* OnVehicleFinishProtocol.swift in Sources */,
+				D8A60336235F2BD600ADD1EF /* CarTypes.swift in Sources */,
+				D8A60339235F33D900ADD1EF /* Rally.swift in Sources */,
+				D8CA9AED235B8B0200CCD8FB /* CarButton.swift in Sources */,
+				D846F536235A16880060818F /* ViewController.swift in Sources */,
+				D8A60340235F3B4A00ADD1EF /* GrandPrix.swift in Sources */,
+				D88613E2235DE60700128911 /* VehicleButton.swift in Sources */,
+				D8A60333235F2B8C00ADD1EF /* Motorcycle.swift in Sources */,
+				D846F534235A16880060818F /* AppDelegate.swift in Sources */,
+				D8A60342235F47DA00ADD1EF /* StartingViewController.swift in Sources */,
+				D8A6033C235F34CA00ADD1EF /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D846F539235A168A0060818F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D846F53A235A168A0060818F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D846F53E235A168A0060818F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D846F53F235A168A0060818F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D846F541235A168A0060818F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RoadRash/RoadRash.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RoadRash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yadhu.RoadRash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D846F542235A168A0060818F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RoadRash/RoadRash.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RoadRash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yadhu.RoadRash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D846F52B235A16880060818F /* Build configuration list for PBXProject "RoadRash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D846F53E235A168A0060818F /* Debug */,
+				D846F53F235A168A0060818F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D846F540235A168A0060818F /* Build configuration list for PBXNativeTarget "RoadRash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D846F541235A168A0060818F /* Debug */,
+				D846F542235A168A0060818F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D846F528235A16880060818F /* Project object */;
+}
