@@ -12,8 +12,11 @@ class GrandPrix: Rally {
     
     var vehicles: [VehicleButton]
     
+    var finishedVehicles: [VehicleButton]
+    
     init() {
         vehicles = [VehicleButton]()
+        finishedVehicles = []
     }
     
     func check(_ vehicles: [VehicleButton]) {

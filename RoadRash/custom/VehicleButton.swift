@@ -25,6 +25,7 @@ class VehicleButton: NSImageView {
     var isFinishingLap: Bool
     var ranking: Int
     var currentRunningLap: Int
+    var isFinished: Bool
     
     var onVehicleFinishProtocol: OnVehicleFinishProtocol?
 
@@ -47,9 +48,9 @@ class VehicleButton: NSImageView {
         self.isFinishingLap = true
         self.ranking = 0
         self.currentRunningLap = 1
+        self.isFinished = false
         super.init(frame: .zero)
         
-//        self.title = "\(brandName)"
         self.vehiclePerformance = self.performance()
     }
 
@@ -72,9 +73,9 @@ class VehicleButton: NSImageView {
         self.isFinishingLap = true
         self.ranking = 0
         self.currentRunningLap = 1
+        self.isFinished = false
         super.init(frame: .zero)
         
-//        self.title = "\(brandName)"
         self.vehiclePerformance = self.performance()
     }
     
@@ -129,10 +130,12 @@ class VehicleButton: NSImageView {
     private func setXPoint(xPoint x: Int) {
         xPoint = x
         if let onVehicleFinishProtocol = onVehicleFinishProtocol, xPoint >= 1000, isFinishingLap {
+            self.isFinished = true
             onVehicleFinishProtocol.onFinished(vehicle: self)
         }
         
         if let onVehicleFinishProtocol = onVehicleFinishProtocol, fuel <= 0 {
+            self.isFinished = true
             onVehicleFinishProtocol.onRaceFailed(vehicle: self)
         }
     }

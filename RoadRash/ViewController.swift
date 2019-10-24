@@ -30,6 +30,11 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
     @IBOutlet weak var tVehicleFuel: NSTextField!
     @IBOutlet weak var frVehicleFuel: NSTextField!
     
+    @IBOutlet weak var fVehicleImage: NSImageView!
+    @IBOutlet weak var sVehicleImage: NSImageView!
+    @IBOutlet weak var tVehicleImage: NSImageView!
+    @IBOutlet weak var frVehicleImage: NSImageView!
+    
     @IBOutlet weak var fVehicleDistance: NSTextField!
     @IBOutlet weak var sVehicleDistance: NSTextField!
     @IBOutlet weak var tVehicleDistance: NSTextField!
@@ -52,27 +57,32 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
     
     var turnPoints: [(Int, VehicleButton)]!
     
+    var finishedVehicles: [VehicleButton]!
+    
+    
     var noOfLaps: Int = 2
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        finishedVehicles = []
+        
         self.title = " Rally 🚗🏆🏍️ "
-        fCar = CarButton()
-        sCar = CarButton()
-        tCar = CarButton()
-        frCar = CarButton()
-        
+        initProject()
+    }
+    
+    func initProject() {
         turnBox.selectItem(at: 0)
+        lapBox.selectItem(at: 0)
         turnPoints = []
-        
+               
         initFinishState()
         createVehicle()
         displayVehicleDetails()
     }
     
     @IBAction func onStartClicked(_ sender: NSButton) {
-        
         
         let noOfTurns = turnBox.indexOfSelectedItem
         if noOfTurns < 2 {
@@ -126,6 +136,7 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
         fCar = vehicles[0]
         fCar.yPoint = 0
         fCar.image = (fCar is CarButton ? NSImage(named: "carThree")! : NSImage(named: "motoOne")!)
+        fVehicleImage.image = (fCar is CarButton ? NSImage(named: "carThree")! : NSImage(named: "motoOne")!)
         fCar.setVehicleFinishProtocol(vehicleProtocol: self)
         self.view.addSubview(fCar)
         fCar.move()
@@ -134,6 +145,7 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
         sCar = vehicles[1]
         sCar.yPoint = 25
         sCar.image = (sCar is CarButton ? NSImage(named: "carTwo")! : NSImage(named: "motoTwo")!)
+        sVehicleImage.image = (sCar is CarButton ? NSImage(named: "carTwo")! : NSImage(named: "motoTwo")!)
         sCar.setVehicleFinishProtocol(vehicleProtocol: self)
         self.view.addSubview(sCar)
         sCar.move()
@@ -142,6 +154,7 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
         tCar = vehicles[2]
         tCar.yPoint = 50
         tCar.image = (tCar is CarButton ? NSImage(named: "car")! : NSImage(named: "motoThree")!)
+        tVehicleImage.image = (tCar is CarButton ? NSImage(named: "car")! : NSImage(named: "motoThree")!)
         tCar.setVehicleFinishProtocol(vehicleProtocol: self)
         self.view.addSubview(tCar)
         tCar.move()
@@ -149,6 +162,7 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
         frCar = vehicles[3]
         frCar.yPoint = 75
         frCar.image = (tCar is CarButton ? NSImage(named: "carFour")! : NSImage(named: "motoFour")!)
+        frVehicleImage.image = (tCar is CarButton ? NSImage(named: "carFour")! : NSImage(named: "motoFour")!)
         frCar.setVehicleFinishProtocol(vehicleProtocol: self)
         self.view.addSubview(frCar)
         frCar.move()
@@ -173,10 +187,10 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
     }
     
     func setFuel() {
-        self.fVehicleFuel.stringValue = String(self.fCar.fuel) + FUEL_UNIT
-        self.sVehicleFuel.stringValue = String(self.sCar.fuel) + FUEL_UNIT
-        self.tVehicleFuel.stringValue = String(self.tCar.fuel) + FUEL_UNIT
-        self.frVehicleFuel.stringValue = String(self.frCar.fuel) + FUEL_UNIT
+        self.fVehicleFuel.stringValue = String(self.fCar.fuel < 0 ? 0 : self.fCar.fuel) + FUEL_UNIT
+        self.sVehicleFuel.stringValue = String(self.sCar.fuel < 0 ? 0 : self.sCar.fuel) + FUEL_UNIT
+        self.tVehicleFuel.stringValue = String(self.tCar.fuel < 0 ? 0 : self.tCar.fuel) + FUEL_UNIT
+        self.frVehicleFuel.stringValue = String(self.frCar.fuel < 0 ? 0 : self.frCar.fuel) + FUEL_UNIT
     }
     
     func setLap() {
@@ -191,6 +205,10 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
         if label.xPoint >= 1000 {
             if label.currentRunningLap >= noOfLaps {
                 label.isFinishingLap = true
+                self.finishedVehicles.append(label)
+                DispatchQueue.main.async {
+                    self.updateFinishing(label)
+                }
                 return
             } else {
                 label.currentRunningLap += 1
@@ -262,8 +280,6 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
     }
        
        
-    
-    
     @IBAction func onItemSelect(_ sender: Any) {
         guard  turnBox.indexOfSelectedItem == 0, turnBox.indexOfSelectedItem == 1 else {
             for (_, value) in turnPoints {
@@ -300,6 +316,20 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
         guard  lapBox.indexOfSelectedItem == 0 else {
             noOfLaps = lapBox.indexOfSelectedItem
             return
+        }
+    }
+    
+    
+    func updateFinishing(_ label: VehicleButton) {
+        let position = finishedVehicles.count
+        if label == fCar {
+            fVehicleFinished.stringValue = "\(position). Finished"
+        } else if label == sCar {
+            sVehicleFinished.stringValue = "\(position). Finished"
+        } else if label == tCar {
+            tVehicleFinished.stringValue = "\(position). Finished"
+        } else if label == frCar {
+            frVehicleFinished.stringValue = "\(position). Finished"
         }
     }
 }

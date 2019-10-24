@@ -1281,7 +1281,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoQ-dO-kjV">
-                                <rect key="frame" x="81" y="174" width="55" height="16"/>
+                                <rect key="frame" x="63" y="174" width="82" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Finished" id="EPt-8r-1jU">
                                     <font key="font" metaFont="system"/>
@@ -1290,7 +1290,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffD-T3-QyA">
-                                <rect key="frame" x="324" y="174" width="55" height="16"/>
+                                <rect key="frame" x="324" y="174" width="74" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Finished" id="ZRa-4P-sKP">
                                     <font key="font" metaFont="system"/>
@@ -1299,7 +1299,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Myc-YH-ML1">
-                                <rect key="frame" x="583" y="174" width="55" height="16"/>
+                                <rect key="frame" x="583" y="174" width="72" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Finished" id="o9R-xq-0xF">
                                     <font key="font" metaFont="system"/>
@@ -1308,7 +1308,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNo-hF-Ude">
-                                <rect key="frame" x="844" y="174" width="55" height="16"/>
+                                <rect key="frame" x="844" y="174" width="76" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Finished" id="QPZ-9H-41b">
                                     <font key="font" metaFont="system"/>
@@ -1353,6 +1353,26 @@
                                     <action selector="onLapItemSelect:" target="XfG-lQ-9wD" id="3xs-et-pxm"/>
                                 </connections>
                             </comboBox>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wwC-lY-gw7">
+                                <rect key="frame" x="1" y="297" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="car" id="jif-s9-ZFd"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jk1-mn-wWe">
+                                <rect key="frame" x="221" y="295" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="car" id="8wC-cA-cQp"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x0W-U8-KNa">
+                                <rect key="frame" x="484" y="295" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="car" id="3AF-tz-Gjq"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vC5-eU-UrV">
+                                <rect key="frame" x="742" y="295" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="car" id="h62-hT-lJE"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="He4-aZ-Sey" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Idk-On-2En"/>
@@ -1367,22 +1387,26 @@
                         <outlet property="fVehicleDistance" destination="8af-XP-PcP" id="Gvv-GB-9zY"/>
                         <outlet property="fVehicleFinished" destination="yoQ-dO-kjV" id="gwM-w5-kCi"/>
                         <outlet property="fVehicleFuel" destination="t8O-Jy-Xar" id="Jai-Xz-ll9"/>
+                        <outlet property="fVehicleImage" destination="wwC-lY-gw7" id="dyU-yk-2aS"/>
                         <outlet property="fVehicleName" destination="Qn6-ZP-Wgv" id="9Bz-2K-xgr"/>
                         <outlet property="fVehicleSpeed" destination="pbi-4q-yfT" id="BPN-53-0JE"/>
                         <outlet property="frVehicleDistance" destination="yVT-0N-S9s" id="8iq-JV-d5E"/>
                         <outlet property="frVehicleFinished" destination="hNo-hF-Ude" id="YQp-CI-asK"/>
                         <outlet property="frVehicleFuel" destination="40X-pz-mrv" id="t8R-Or-7KL"/>
+                        <outlet property="frVehicleImage" destination="vC5-eU-UrV" id="Px9-pv-dVA"/>
                         <outlet property="frVehicleName" destination="s7P-ao-1zi" id="Rrl-tJ-B2F"/>
                         <outlet property="frVehicleSpeed" destination="fVy-Zx-vu6" id="KDa-ot-55m"/>
                         <outlet property="lapBox" destination="2jJ-dm-j7H" id="stl-rK-0pK"/>
                         <outlet property="sVehicleDistance" destination="WYB-eX-qd7" id="AdI-mj-fJ2"/>
                         <outlet property="sVehicleFinished" destination="ffD-T3-QyA" id="qcC-fN-tKC"/>
                         <outlet property="sVehicleFuel" destination="ebe-2l-6xL" id="g5Y-yD-CYC"/>
+                        <outlet property="sVehicleImage" destination="jk1-mn-wWe" id="u1E-K7-u5D"/>
                         <outlet property="sVehicleName" destination="pNG-6u-Wof" id="snq-Yi-Vdr"/>
                         <outlet property="sVehicleSpeed" destination="ecy-yL-nUd" id="0DA-xz-9Rc"/>
                         <outlet property="tVehicleDistance" destination="hnX-3i-2gq" id="lMG-Sz-WHa"/>
                         <outlet property="tVehicleFinished" destination="Myc-YH-ML1" id="6bx-qP-mjx"/>
                         <outlet property="tVehicleFuel" destination="4It-Z8-UFQ" id="zi1-qw-sUH"/>
+                        <outlet property="tVehicleImage" destination="x0W-U8-KNa" id="Dci-P3-fbX"/>
                         <outlet property="tVehicleName" destination="wl3-Is-A8t" id="8RR-o7-vqQ"/>
                         <outlet property="tVehicleSpeed" destination="pnT-xZ-t0W" id="e1G-MS-ZeA"/>
                         <outlet property="turnBox" destination="0Ze-JN-HTh" id="evg-ri-y5f"/>
@@ -1395,5 +1419,6 @@
     </scenes>
     <resources>
         <image name="NSSlideshowTemplate" width="17" height="14"/>
+        <image name="car" width="512" height="512"/>
     </resources>
 </document>
