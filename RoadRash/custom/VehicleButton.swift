@@ -38,7 +38,7 @@ class VehicleButton: NSImageView {
         self.speed = 130
         self.weight = 1000
         self.economy = 0.0
-        self.width = 70
+        self.width = 50
         self.height = 20
         self.xPoint = 0
         self.yPoint = 0

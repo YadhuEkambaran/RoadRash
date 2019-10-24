@@ -973,19 +973,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="IXA-wM-TfP">
-                                <rect key="frame" x="183" y="165" width="5" height="178"/>
+                                <rect key="frame" x="218" y="165" width="5" height="178"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="f2V-0x-jZp">
-                                <rect key="frame" x="385" y="165" width="5" height="178"/>
+                                <rect key="frame" x="481" y="165" width="5" height="178"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="cKd-UM-2F7">
-                                <rect key="frame" x="600" y="165" width="5" height="178"/>
+                                <rect key="frame" x="739" y="165" width="5" height="178"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qn6-ZP-Wgv">
-                                <rect key="frame" x="49" y="318" width="85" height="16"/>
+                                <rect key="frame" x="67" y="318" width="85" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Vehicle name" id="yCV-e3-nff">
                                     <font key="font" metaFont="system"/>
@@ -994,7 +994,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pNG-6u-Wof">
-                                <rect key="frame" x="246" y="318" width="85" height="16"/>
+                                <rect key="frame" x="308" y="318" width="85" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Vehicle name" id="1LP-dg-ieu">
                                     <font key="font" metaFont="system"/>
@@ -1003,7 +1003,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wl3-Is-A8t">
-                                <rect key="frame" x="453" y="318" width="85" height="16"/>
+                                <rect key="frame" x="570" y="318" width="85" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Vehicle name" id="4OY-FR-eK4">
                                     <font key="font" metaFont="system"/>
@@ -1012,7 +1012,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9eR-ST-dgC">
-                                <rect key="frame" x="655" y="318" width="85" height="16"/>
+                                <rect key="frame" x="830" y="318" width="85" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Vehicle name" id="s7P-ao-1zi">
                                     <font key="font" metaFont="system"/>
@@ -1021,7 +1021,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="97b-9T-2N5">
-                                <rect key="frame" x="20" y="275" width="43" height="16"/>
+                                <rect key="frame" x="38" y="275" width="43" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Speed" id="8KD-Bm-S0C">
                                     <font key="font" metaFont="system"/>
@@ -1030,7 +1030,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pbi-4q-yfT">
-                                <rect key="frame" x="73" y="275" width="79" height="16"/>
+                                <rect key="frame" x="91" y="275" width="79" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Speed value" id="DNA-g7-e5y">
                                     <font key="font" metaFont="system"/>
@@ -1039,7 +1039,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UE3-ph-NdT">
-                                <rect key="frame" x="20" y="240" width="30" height="16"/>
+                                <rect key="frame" x="38" y="240" width="30" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Fuel" id="bE1-aW-8fq">
                                     <font key="font" metaFont="system"/>
@@ -1048,7 +1048,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t8O-Jy-Xar">
-                                <rect key="frame" x="72" y="240" width="65" height="16"/>
+                                <rect key="frame" x="90" y="240" width="65" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Fuel value" id="66W-xU-gsm">
                                     <font key="font" metaFont="system"/>
@@ -1057,16 +1057,16 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ce4-L9-oJO">
-                                <rect key="frame" x="6" y="207" width="57" height="16"/>
+                                <rect key="frame" x="36" y="207" width="27" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Distance" id="c7y-Kj-Pwn">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Lap" id="c7y-Kj-Pwn">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8af-XP-PcP">
-                                <rect key="frame" x="72" y="207" width="93" height="16"/>
+                                <rect key="frame" x="90" y="207" width="93" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Distance value" id="O1R-wN-rj6">
                                     <font key="font" metaFont="system"/>
@@ -1075,7 +1075,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KD8-Qu-owg">
-                                <rect key="frame" x="224" y="274" width="39" height="16"/>
+                                <rect key="frame" x="286" y="274" width="39" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Speed" id="A5p-1Y-Pqe">
                                     <font key="font" metaFont="system"/>
@@ -1084,7 +1084,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ecy-yL-nUd">
-                                <rect key="frame" x="277" y="274" width="75" height="16"/>
+                                <rect key="frame" x="339" y="274" width="75" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Speed value" id="L7d-mE-5F0">
                                     <font key="font" metaFont="system"/>
@@ -1093,7 +1093,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gno-DO-axa">
-                                <rect key="frame" x="224" y="239" width="30" height="16"/>
+                                <rect key="frame" x="286" y="239" width="30" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Fuel" id="FEF-Ke-jaX">
                                     <font key="font" metaFont="system"/>
@@ -1102,7 +1102,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ebe-2l-6xL">
-                                <rect key="frame" x="275" y="239" width="61" height="16"/>
+                                <rect key="frame" x="337" y="239" width="61" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Fuel value" id="Q5E-8E-AN1">
                                     <font key="font" metaFont="system"/>
@@ -1111,16 +1111,16 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7dM-CF-Dkl">
-                                <rect key="frame" x="210" y="206" width="53" height="16"/>
+                                <rect key="frame" x="284" y="206" width="34" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Distance" id="urH-RS-vfa">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Lap" id="urH-RS-vfa">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WYB-eX-qd7">
-                                <rect key="frame" x="276" y="206" width="89" height="16"/>
+                                <rect key="frame" x="338" y="206" width="89" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Distance value" id="ZRS-bf-L2R">
                                     <font key="font" metaFont="system"/>
@@ -1129,7 +1129,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zX5-tj-fym">
-                                <rect key="frame" x="431" y="275" width="39" height="16"/>
+                                <rect key="frame" x="548" y="275" width="39" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Speed" id="HBb-Co-RTd">
                                     <font key="font" metaFont="system"/>
@@ -1138,7 +1138,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pnT-xZ-t0W">
-                                <rect key="frame" x="484" y="275" width="75" height="16"/>
+                                <rect key="frame" x="601" y="275" width="75" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Speed value" id="dKe-4g-yT3">
                                     <font key="font" metaFont="system"/>
@@ -1147,7 +1147,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvb-xm-ocm">
-                                <rect key="frame" x="431" y="240" width="30" height="16"/>
+                                <rect key="frame" x="548" y="240" width="30" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Fuel" id="fXx-12-4Bn">
                                     <font key="font" metaFont="system"/>
@@ -1156,7 +1156,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4It-Z8-UFQ">
-                                <rect key="frame" x="482" y="240" width="61" height="16"/>
+                                <rect key="frame" x="599" y="240" width="61" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Fuel value" id="vMe-Yz-e2m">
                                     <font key="font" metaFont="system"/>
@@ -1165,16 +1165,16 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNO-Im-s2b">
-                                <rect key="frame" x="417" y="207" width="53" height="16"/>
+                                <rect key="frame" x="548" y="207" width="53" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Distance" id="duZ-cY-wcr">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Lap" id="duZ-cY-wcr">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hnX-3i-2gq">
-                                <rect key="frame" x="483" y="207" width="89" height="16"/>
+                                <rect key="frame" x="600" y="207" width="89" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Distance value" id="vLx-HU-pZC">
                                     <font key="font" metaFont="system"/>
@@ -1183,7 +1183,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kHW-TT-LUy">
-                                <rect key="frame" x="633" y="273" width="39" height="16"/>
+                                <rect key="frame" x="808" y="273" width="39" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Speed" id="O1C-KE-bY4">
                                     <font key="font" metaFont="system"/>
@@ -1192,7 +1192,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fVy-Zx-vu6">
-                                <rect key="frame" x="686" y="273" width="75" height="16"/>
+                                <rect key="frame" x="861" y="273" width="75" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Speed value" id="ZZi-Bm-N1q">
                                     <font key="font" metaFont="system"/>
@@ -1201,7 +1201,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RAL-1b-zbc">
-                                <rect key="frame" x="633" y="238" width="30" height="16"/>
+                                <rect key="frame" x="808" y="238" width="30" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Fuel" id="M0i-D2-MJ0">
                                     <font key="font" metaFont="system"/>
@@ -1210,7 +1210,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40X-pz-mrv">
-                                <rect key="frame" x="684" y="238" width="61" height="16"/>
+                                <rect key="frame" x="859" y="238" width="61" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Fuel value" id="cRw-Em-6UW">
                                     <font key="font" metaFont="system"/>
@@ -1219,16 +1219,16 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7Q-Xs-9nx">
-                                <rect key="frame" x="619" y="205" width="53" height="16"/>
+                                <rect key="frame" x="809" y="205" width="53" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Distance" id="mb4-Iv-Xg0">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Lap" id="mb4-Iv-Xg0">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yVT-0N-S9s">
-                                <rect key="frame" x="685" y="205" width="89" height="16"/>
+                                <rect key="frame" x="860" y="205" width="89" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Distance value" id="g3h-nQ-P20">
                                     <font key="font" metaFont="system"/>
@@ -1236,10 +1236,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="q0C-9v-Mjj">
-                                <rect key="frame" x="805" y="165" width="5" height="178"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </box>
                             <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="xdZ-hZ-O9C">
                                 <rect key="frame" x="100" y="0.0" width="5" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1285,7 +1281,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoQ-dO-kjV">
-                                <rect key="frame" x="63" y="174" width="55" height="16"/>
+                                <rect key="frame" x="81" y="174" width="55" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Finished" id="EPt-8r-1jU">
                                     <font key="font" metaFont="system"/>
@@ -1294,7 +1290,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffD-T3-QyA">
-                                <rect key="frame" x="262" y="174" width="55" height="16"/>
+                                <rect key="frame" x="324" y="174" width="55" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Finished" id="ZRa-4P-sKP">
                                     <font key="font" metaFont="system"/>
@@ -1303,7 +1299,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Myc-YH-ML1">
-                                <rect key="frame" x="466" y="174" width="55" height="16"/>
+                                <rect key="frame" x="583" y="174" width="55" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Finished" id="o9R-xq-0xF">
                                     <font key="font" metaFont="system"/>
@@ -1312,7 +1308,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNo-hF-Ude">
-                                <rect key="frame" x="669" y="174" width="55" height="16"/>
+                                <rect key="frame" x="844" y="174" width="55" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Finished" id="QPZ-9H-41b">
                                     <font key="font" metaFont="system"/>
@@ -1321,7 +1317,7 @@
                                 </textFieldCell>
                             </textField>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ze-JN-HTh">
-                                <rect key="frame" x="339" y="366" width="99" height="25"/>
+                                <rect key="frame" x="287" y="366" width="137" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="BUP-el-Cfl">
                                     <font key="font" metaFont="titleBar"/>
@@ -1337,6 +1333,24 @@
                                 </comboBoxCell>
                                 <connections>
                                     <action selector="onItemSelect:" target="XfG-lQ-9wD" id="r16-0N-Jhl"/>
+                                </connections>
+                            </comboBox>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2jJ-dm-j7H">
+                                <rect key="frame" x="77" y="366" width="174" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="tL5-UT-Csc">
+                                    <font key="font" metaFont="titleBar"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <objectValues>
+                                        <string>Select no of laps</string>
+                                        <string>1</string>
+                                        <string>2</string>
+                                        <string>3</string>
+                                    </objectValues>
+                                </comboBoxCell>
+                                <connections>
+                                    <action selector="onLapItemSelect:" target="XfG-lQ-9wD" id="3xs-et-pxm"/>
                                 </connections>
                             </comboBox>
                         </subviews>
@@ -1360,6 +1374,7 @@
                         <outlet property="frVehicleFuel" destination="40X-pz-mrv" id="t8R-Or-7KL"/>
                         <outlet property="frVehicleName" destination="s7P-ao-1zi" id="Rrl-tJ-B2F"/>
                         <outlet property="frVehicleSpeed" destination="fVy-Zx-vu6" id="KDa-ot-55m"/>
+                        <outlet property="lapBox" destination="2jJ-dm-j7H" id="stl-rK-0pK"/>
                         <outlet property="sVehicleDistance" destination="WYB-eX-qd7" id="AdI-mj-fJ2"/>
                         <outlet property="sVehicleFinished" destination="ffD-T3-QyA" id="qcC-fN-tKC"/>
                         <outlet property="sVehicleFuel" destination="ebe-2l-6xL" id="g5Y-yD-CYC"/>

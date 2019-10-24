@@ -41,6 +41,7 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
     @IBOutlet weak var frVehicleFinished: NSTextField!
     
     @IBOutlet weak var turnBox: NSComboBox!
+    @IBOutlet weak var lapBox: NSComboBox!
     
     var fCar: VehicleButton!
     var sCar: VehicleButton!
@@ -71,6 +72,19 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
     }
     
     @IBAction func onStartClicked(_ sender: NSButton) {
+        
+        
+        let noOfTurns = turnBox.indexOfSelectedItem
+        if noOfTurns < 2 {
+            Util.showAlert(message: "Select no of turns required, It is mandatory")
+            return
+        }
+        
+        noOfLaps = lapBox.indexOfSelectedItem
+        if (noOfLaps == 0) {
+            Util.showAlert(message: "Select no of laps required, It is mandatory")
+            return
+        }
         
         btnStartRace.isHidden = true
         
@@ -108,12 +122,10 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
             return
         }
         
-        
-        
         let vehicles = grandPrix.vehicles
         fCar = vehicles[0]
         fCar.yPoint = 0
-        fCar.image = (fCar is CarButton ? NSImage(named: "car")! : NSImage(named: "motoOne")!)
+        fCar.image = (fCar is CarButton ? NSImage(named: "carThree")! : NSImage(named: "motoOne")!)
         fCar.setVehicleFinishProtocol(vehicleProtocol: self)
         self.view.addSubview(fCar)
         fCar.move()
@@ -129,7 +141,7 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
         
         tCar = vehicles[2]
         tCar.yPoint = 50
-        tCar.image = (tCar is CarButton ? NSImage(named: "carThree")! : NSImage(named: "motoThree")!)
+        tCar.image = (tCar is CarButton ? NSImage(named: "car")! : NSImage(named: "motoThree")!)
         tCar.setVehicleFinishProtocol(vehicleProtocol: self)
         self.view.addSubview(tCar)
         tCar.move()
@@ -157,6 +169,7 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
         self.frVehicleSpeed.stringValue = String(self.frCar.speed) + SPEED_UNIT
         
         setFuel()
+        setLap()
     }
     
     func setFuel() {
@@ -164,6 +177,13 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
         self.sVehicleFuel.stringValue = String(self.sCar.fuel) + FUEL_UNIT
         self.tVehicleFuel.stringValue = String(self.tCar.fuel) + FUEL_UNIT
         self.frVehicleFuel.stringValue = String(self.frCar.fuel) + FUEL_UNIT
+    }
+    
+    func setLap() {
+        self.fVehicleDistance.stringValue = "\(self.fCar.currentRunningLap)"
+        self.sVehicleDistance.stringValue = "\(self.sCar.currentRunningLap)"
+        self.tVehicleDistance.stringValue = "\(self.tCar.currentRunningLap)"
+        self.frVehicleDistance.stringValue = "\(self.frCar.currentRunningLap)"
     }
     
     
@@ -201,7 +221,7 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
             DispatchQueue.main.async {
                 label.move()
                 self.setFuel()
-//                print("\(label.title) moved \(label.xPoint)")
+                self.setLap()
             }
             
             self.moveLabel(label, turn)
@@ -262,8 +282,9 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
             let turnButton = CarButton()
             turnButton.xPoint = turnXPoint
             turnButton.yPoint = 105
-            turnButton.width = 10
-            turnButton.height = 10
+            turnButton.width = 20
+            turnButton.height = 20
+            turnButton.image = NSImage(named: "turn")!
             self.view.addSubview(turnButton)
             turnButton.move()
             turnPoints.append((turnXPoint, turnButton))
@@ -272,6 +293,13 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
             if point >= 800 {
                 break
             }
+        }
+    }
+    
+    @IBAction func onLapItemSelect(_ sender: Any) {
+        guard  lapBox.indexOfSelectedItem == 0 else {
+            noOfLaps = lapBox.indexOfSelectedItem
+            return
         }
     }
 }
