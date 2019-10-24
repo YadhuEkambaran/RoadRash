@@ -9,7 +9,7 @@
 import Cocoa
 
 class ViewController: NSViewController, OnVehicleFinishProtocol {
-    
+   
     private final var SPEED_UNIT: String = " KM/Hr"
     private final var FUEL_UNIT: String = " Lr"
     
@@ -40,41 +40,57 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
     @IBOutlet weak var tVehicleFinished: NSTextField!
     @IBOutlet weak var frVehicleFinished: NSTextField!
     
-    var fCar: CarButton!
-    var sCar: CarButton!
-    var tCar: CarButton!
-    var frCar: CarButton!
+    @IBOutlet weak var turnBox: NSComboBox!
+    
+    var fCar: VehicleButton!
+    var sCar: VehicleButton!
+    var tCar: VehicleButton!
+    var frCar: VehicleButton!
+    
+    var grandPrix: GrandPrix!
+    
+    var turnPoints: [(Int, VehicleButton)]!
+    
+    var noOfLaps: Int = 2
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = " Rally 🚗🏆🏍️ "
         fCar = CarButton()
         sCar = CarButton()
         tCar = CarButton()
         frCar = CarButton()
+        
+        turnBox.selectItem(at: 0)
+        turnPoints = []
+        
         initFinishState()
         createVehicle()
         displayVehicleDetails()
     }
-
     
     @IBAction func onStartClicked(_ sender: NSButton) {
         
         btnStartRace.isHidden = true
         
         DispatchQueue.global().asyncAfter(deadline: .now() + 0.94) {
+            self.fCar.isFinishingLap = (self.fCar.currentRunningLap == self.noOfLaps)
             self.moveLabel(self.fCar, 1)
         }
         
         DispatchQueue.global().asyncAfter(deadline: .now() + 0.94) {
+            self.sCar.isFinishingLap = (self.sCar.currentRunningLap == self.noOfLaps)
             self.moveLabel(self.sCar, 1)
         }
         
         DispatchQueue.global().asyncAfter(deadline: .now() + 0.94) {
+            self.tCar.isFinishingLap = (self.tCar.currentRunningLap  == self.noOfLaps)
             self.moveLabel(self.tCar, 1)
         }
         
         DispatchQueue.global().asyncAfter(deadline: .now() + 0.94) {
+            self.frCar.isFinishingLap = (self.frCar.currentRunningLap  == self.noOfLaps)
             self.moveLabel(self.frCar, 1)
         }
     }
@@ -87,47 +103,63 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
     }
     
     func createVehicle() {
-        self.fCar.title = "BMW"
+        guard let grandPrix = grandPrix else {
+            print("User dont have any vehicle details")
+            return
+        }
+        
+        
+        
+        let vehicles = grandPrix.vehicles
+        fCar = vehicles[0]
         fCar.yPoint = 0
-        fCar.speed = 150
+        fCar.image = (fCar is CarButton ? NSImage(named: "car")! : NSImage(named: "motoOne")!)
         fCar.setVehicleFinishProtocol(vehicleProtocol: self)
         self.view.addSubview(fCar)
         fCar.move()
         
-        sCar.title = "Audi"
+        
+        sCar = vehicles[1]
         sCar.yPoint = 25
-        sCar.speed = 140
+        sCar.image = (sCar is CarButton ? NSImage(named: "carTwo")! : NSImage(named: "motoTwo")!)
         sCar.setVehicleFinishProtocol(vehicleProtocol: self)
         self.view.addSubview(sCar)
         sCar.move()
         
-        tCar.title = "Bugatti"
+        
+        tCar = vehicles[2]
         tCar.yPoint = 50
-        tCar.speed = 380
+        tCar.image = (tCar is CarButton ? NSImage(named: "carThree")! : NSImage(named: "motoThree")!)
         tCar.setVehicleFinishProtocol(vehicleProtocol: self)
         self.view.addSubview(tCar)
         tCar.move()
         
-        frCar.title = "Lamborgini"
+        frCar = vehicles[3]
         frCar.yPoint = 75
-        frCar.speed = 300
+        frCar.image = (tCar is CarButton ? NSImage(named: "carFour")! : NSImage(named: "motoFour")!)
         frCar.setVehicleFinishProtocol(vehicleProtocol: self)
         self.view.addSubview(frCar)
         frCar.move()
+        
+        grandPrix.updatePerformance()
     }
     
     
     func displayVehicleDetails() {
-        self.fVehicleName.stringValue = self.fCar.title
-        self.sVehicleName.stringValue = self.sCar.title
-        self.tVehicleName.stringValue = self.tCar.title
-        self.frVehicleName.stringValue = self.frCar.title
+        self.fVehicleName.stringValue = self.fCar.brandName
+        self.sVehicleName.stringValue = self.sCar.brandName
+        self.tVehicleName.stringValue = self.tCar.brandName
+        self.frVehicleName.stringValue = self.frCar.brandName
         
         self.fVehicleSpeed.stringValue = String(self.fCar.speed) + SPEED_UNIT
         self.sVehicleSpeed.stringValue = String(self.sCar.speed) + SPEED_UNIT
         self.tVehicleSpeed.stringValue = String(self.tCar.speed) + SPEED_UNIT
         self.frVehicleSpeed.stringValue = String(self.frCar.speed) + SPEED_UNIT
         
+        setFuel()
+    }
+    
+    func setFuel() {
         self.fVehicleFuel.stringValue = String(self.fCar.fuel) + FUEL_UNIT
         self.sVehicleFuel.stringValue = String(self.sCar.fuel) + FUEL_UNIT
         self.tVehicleFuel.stringValue = String(self.tCar.fuel) + FUEL_UNIT
@@ -137,14 +169,39 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
     
     func moveLabel(_ label: VehicleButton, _ turn: Int) {
         if label.xPoint >= 1000 {
+            if label.currentRunningLap >= noOfLaps {
+                label.isFinishingLap = true
+                return
+            } else {
+                label.currentRunningLap += 1
+                label.isFinishingLap = false
+                label.xPoint = 0
+            }
+        } else if label.fuel <= 0 {
             return
         }
         
-        DispatchQueue.global().asyncAfter(deadline: .now() + 1.0) {
-            label.xPoint += Int(label.speed * 1000)/3600
+        DispatchQueue.global().asyncAfter(deadline: .now() + 0.50) {
+            let speed = label.speed
+            for (key, _) in self.turnPoints {
+                switch label.xPoint {
+                    case (key - 30)...(key + 30):
+                        label.currentSpeed = (label.speed / 10)
+                        label.fuel -= 0.5
+                    default:
+                        label.currentSpeed = label.currentSpeed + (speed / 10)
+                }
+            }
+            
+            if label.currentSpeed >= speed {
+                label.currentSpeed = speed
+            }
+            
+            label.xPoint += Int(label.currentSpeed * 1000)/(3600)
             DispatchQueue.main.async {
                 label.move()
-                print("\(label.title) moved \(label.xPoint)")
+                self.setFuel()
+//                print("\(label.title) moved \(label.xPoint)")
             }
             
             self.moveLabel(label, turn)
@@ -154,13 +211,67 @@ class ViewController: NSViewController, OnVehicleFinishProtocol {
     
     func onFinished(vehicle v: VehicleButton) {
         if v == fCar {
+            fVehicleFinished.stringValue = "Finished"
             fVehicleFinished.isHidden = false
         } else if v == sCar {
+            sVehicleFinished.stringValue = "Finished"
             sVehicleFinished.isHidden = false
         } else if v == tCar {
+            tVehicleFinished.stringValue = "Finished"
             tVehicleFinished.isHidden = false
         } else if v == frCar {
+            frVehicleFinished.stringValue = "Finished"
             frVehicleFinished.isHidden = false
+        }
+    }
+    
+    func onRaceFailed(vehicle v: VehicleButton) {
+           if v == fCar {
+                fVehicleFinished.stringValue = "Failed"
+                fVehicleFinished.isHidden = false
+           } else if v == sCar {
+                sVehicleFinished.stringValue = "Failed"
+                sVehicleFinished.isHidden = false
+           } else if v == tCar {
+                tVehicleFinished.stringValue = "Failed"
+                tVehicleFinished.isHidden = false
+           } else if v == frCar {
+                frVehicleFinished.stringValue = "Failed"
+                frVehicleFinished.isHidden = false
+           }
+    }
+       
+       
+    
+    
+    @IBAction func onItemSelect(_ sender: Any) {
+        guard  turnBox.indexOfSelectedItem == 0, turnBox.indexOfSelectedItem == 1 else {
+            for (_, value) in turnPoints {
+                value.removeFromSuperview();
+            }
+            return setTurns()
+        }
+    }
+    
+    func setTurns() {
+        let turn = Int(turnBox.stringValue)!
+        var i = 0
+        var point = 1000 / (turn + 1)
+        while i < turn {
+            let turnXPoint = point
+            let turnButton = CarButton()
+            turnButton.xPoint = turnXPoint
+            turnButton.yPoint = 105
+            turnButton.width = 10
+            turnButton.height = 10
+            self.view.addSubview(turnButton)
+            turnButton.move()
+            turnPoints.append((turnXPoint, turnButton))
+            i += 1
+            point += point
+            if point >= 800 {
+                break
+            }
         }
     }
 }

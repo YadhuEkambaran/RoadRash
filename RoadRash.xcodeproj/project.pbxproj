@@ -18,6 +18,8 @@
 		D8A6033C235F34CA00ADD1EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A6033B235F34CA00ADD1EF /* Constants.swift */; };
 		D8A60340235F3B4A00ADD1EF /* GrandPrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A6033F235F3B4A00ADD1EF /* GrandPrix.swift */; };
 		D8A60342235F47DA00ADD1EF /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A60341235F47DA00ADD1EF /* StartingViewController.swift */; };
+		D8A60344235F80DD00ADD1EF /* MotoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A60343235F80DD00ADD1EF /* MotoType.swift */; };
+		D8A60346235F9A3E00ADD1EF /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A60345235F9A3E00ADD1EF /* Util.swift */; };
 		D8CA9AED235B8B0200CCD8FB /* CarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA9AEC235B8B0200CCD8FB /* CarButton.swift */; };
 		D8CA9AF4235D41BE00CCD8FB /* OnVehicleFinishProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA9AF3235D41BE00CCD8FB /* OnVehicleFinishProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +39,8 @@
 		D8A6033B235F34CA00ADD1EF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D8A6033F235F3B4A00ADD1EF /* GrandPrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrandPrix.swift; sourceTree = "<group>"; };
 		D8A60341235F47DA00ADD1EF /* StartingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
+		D8A60343235F80DD00ADD1EF /* MotoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotoType.swift; sourceTree = "<group>"; };
+		D8A60345235F9A3E00ADD1EF /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		D8CA9AEC235B8B0200CCD8FB /* CarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarButton.swift; sourceTree = "<group>"; };
 		D8CA9AF3235D41BE00CCD8FB /* OnVehicleFinishProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnVehicleFinishProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				D8A60335235F2BD600ADD1EF /* CarTypes.swift */,
+				D8A60343235F80DD00ADD1EF /* MotoType.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				D8A6033B235F34CA00ADD1EF /* Constants.swift */,
+				D8A60345235F9A3E00ADD1EF /* Util.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -206,6 +212,8 @@
 				D8CA9AED235B8B0200CCD8FB /* CarButton.swift in Sources */,
 				D846F536235A16880060818F /* ViewController.swift in Sources */,
 				D8A60340235F3B4A00ADD1EF /* GrandPrix.swift in Sources */,
+				D8A60344235F80DD00ADD1EF /* MotoType.swift in Sources */,
+				D8A60346235F9A3E00ADD1EF /* Util.swift in Sources */,
 				D88613E2235DE60700128911 /* VehicleButton.swift in Sources */,
 				D8A60333235F2B8C00ADD1EF /* Motorcycle.swift in Sources */,
 				D846F534235A16880060818F /* AppDelegate.swift in Sources */,

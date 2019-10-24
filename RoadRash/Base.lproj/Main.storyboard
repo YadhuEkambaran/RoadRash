@@ -842,7 +842,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Adw-oO-TIZ">
-                                <rect key="frame" x="125" y="11" width="73" height="19"/>
+                                <rect key="frame" x="129" y="11" width="73" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="recessed" title="Add" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="38D-Pv-7hd">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
@@ -852,14 +852,55 @@
                                     <action selector="onAddClicked:" target="c5u-HM-qfu" id="iw5-L1-OMs"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nf3-sB-kvV">
-                                <rect key="frame" x="165" y="43" width="53" height="18"/>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kim-EK-1U2">
+                                <rect key="frame" x="167" y="44" width="68" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Race" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="gBM-mr-As8">
+                                <buttonCell key="cell" type="radio" title="Touring" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Jmh-Sr-TgY">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="onTouringClicked:" target="c5u-HM-qfu" id="GiI-1k-9g2"/>
+                                </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K3C-E1-7Fs">
+                                <rect key="frame" x="248" y="44" width="64" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="radio" title="Racing" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="dJ5-bt-qnY">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onRacingClicked:" target="c5u-HM-qfu" id="T4u-9R-fiE"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNj-0E-mwe">
+                                <rect key="frame" x="602" y="5" width="137" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Proceed to race" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4CI-8A-aU7">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onProceedToRaceClicked:" target="c5u-HM-qfu" id="t0M-47-N3o"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oK2-Mv-U9y">
+                                <rect key="frame" x="403" y="45" width="322" height="313"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" id="8yT-6S-PV1">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <connections>
+                                        <binding destination="c5u-HM-qfu" name="displayPatternValue1" keyPath="self.participants" id="flV-2c-Tdg">
+                                            <dictionary key="options">
+                                                <string key="NSDisplayPattern">%{value1}@</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -869,8 +910,10 @@
                         <outlet property="fuel" destination="YzN-j2-4gX" id="0cl-tx-Chq"/>
                         <outlet property="modelName" destination="sRJ-6o-FND" id="iNI-pd-mi5"/>
                         <outlet property="moto" destination="VMd-vb-Rdl" id="BLF-j3-3IW"/>
-                        <outlet property="raceOrTouringOrSideCar" destination="nf3-sB-kvV" id="0CI-dA-lMk"/>
+                        <outlet property="participants" destination="oK2-Mv-U9y" id="9Eq-sM-IIz"/>
+                        <outlet property="racingOption" destination="K3C-E1-7Fs" id="JAY-sa-tEQ"/>
                         <outlet property="speed" destination="d0O-rf-7TH" id="cxv-iO-3rt"/>
+                        <outlet property="touringOption" destination="kim-EK-1U2" id="0iE-Aa-hJm"/>
                         <outlet property="weight" destination="Z5V-IL-aoL" id="wTS-bz-gec"/>
                     </connections>
                 </viewController>
@@ -902,7 +945,7 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="RoadRash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="RoadRash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="459"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1050,7 +1093,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gno-DO-axa">
-                                <rect key="frame" x="224" y="239" width="26" height="16"/>
+                                <rect key="frame" x="224" y="239" width="30" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Fuel" id="FEF-Ke-jaX">
                                     <font key="font" metaFont="system"/>
@@ -1104,7 +1147,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvb-xm-ocm">
-                                <rect key="frame" x="431" y="240" width="26" height="16"/>
+                                <rect key="frame" x="431" y="240" width="30" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Fuel" id="fXx-12-4Bn">
                                     <font key="font" metaFont="system"/>
@@ -1158,7 +1201,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RAL-1b-zbc">
-                                <rect key="frame" x="633" y="238" width="26" height="16"/>
+                                <rect key="frame" x="633" y="238" width="30" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Fuel" id="M0i-D2-MJ0">
                                     <font key="font" metaFont="system"/>
@@ -1277,6 +1320,25 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ze-JN-HTh">
+                                <rect key="frame" x="339" y="366" width="99" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="BUP-el-Cfl">
+                                    <font key="font" metaFont="titleBar"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <objectValues>
+                                        <string>Select turns</string>
+                                        <string>0</string>
+                                        <string>1</string>
+                                        <string>2</string>
+                                        <string>3</string>
+                                    </objectValues>
+                                </comboBoxCell>
+                                <connections>
+                                    <action selector="onItemSelect:" target="XfG-lQ-9wD" id="r16-0N-Jhl"/>
+                                </connections>
+                            </comboBox>
                         </subviews>
                         <constraints>
                             <constraint firstItem="He4-aZ-Sey" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Idk-On-2En"/>
@@ -1308,6 +1370,7 @@
                         <outlet property="tVehicleFuel" destination="4It-Z8-UFQ" id="zi1-qw-sUH"/>
                         <outlet property="tVehicleName" destination="wl3-Is-A8t" id="8RR-o7-vqQ"/>
                         <outlet property="tVehicleSpeed" destination="pnT-xZ-t0W" id="e1G-MS-ZeA"/>
+                        <outlet property="turnBox" destination="0Ze-JN-HTh" id="evg-ri-y5f"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

@@ -17,7 +17,7 @@ class Motorcycle: VehicleButton {
             super.init()
         }
        
-        required init(brandName: String, modelName: String, maximalSpeed: Double, weight: Int, fuel: Int,    economy: Double, isSideCarAvail: Bool) {
+        required init(brandName: String, modelName: String, maximalSpeed: Double, weight: Int, fuel: Double,    economy: Double, isSideCarAvail: Bool) {
             self.isSideCarAvail = isSideCarAvail
             super.init(brandName: brandName, modelName: modelName, maximalSpeed: maximalSpeed, weight: weight, fuel: fuel, economy: economy)
         }
@@ -28,13 +28,12 @@ class Motorcycle: VehicleButton {
         }
        
     
-        required init(brandName: String, modelName: String, maximalSpeed: Double, weight: Int, fuel: Int,   economy: Double) {
+        required init(brandName: String, modelName: String, maximalSpeed: Double, weight: Int, fuel: Double,   economy: Double) {
             fatalError("init(brandName:modelName:maximalSpeed:weight:fuel:economy:) has not been implemented")
         }
        
     
-       override func toString() {
-            super.toString()
+       override func toString() -> String {
             var category: String
             if isSideCarAvail {
                 category = "Moto, with sidecar"
@@ -42,11 +41,11 @@ class Motorcycle: VehicleButton {
                 category = "Moto"
             }
         
-            print("\(self.brandName) \(modelName) -> speed max -> \(speed) \(Constants.SPEED_UNIT), weight = \(self.weight) \(Constants.WEIGHT_UNIT) category \(category)")
+            return ("\(self.brandName) \(modelName) -> speed max -> \(speed) \(Constants.SPEED_UNIT), weight = \(self.weight) \(Constants.WEIGHT_UNIT) category \(category)")
        }
     
     func isTwoWheeled() -> Bool {
-        return self.isSideCarAvail
+        return !self.isSideCarAvail
     }
     
 }

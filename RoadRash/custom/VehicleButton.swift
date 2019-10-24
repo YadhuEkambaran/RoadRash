@@ -8,18 +8,23 @@
 
 import Cocoa
 
-class VehicleButton: NSButton {
+class VehicleButton: NSImageView {
 
     var brandName: String
     var modelName: String
     var weight: Int
     var speed: Double
-    var fuel: Int
+    var fuel: Double
     var economy: Double
     var width: Int
     var height: Int
     var xPoint: Int
     var yPoint: Int
+    var currentSpeed: Double
+    var vehiclePerformance: Double
+    var isFinishingLap: Bool
+    var ranking: Int
+    var currentRunningLap: Int
     
     var onVehicleFinishProtocol: OnVehicleFinishProtocol?
 
@@ -32,31 +37,45 @@ class VehicleButton: NSButton {
         self.fuel = 0
         self.speed = 130
         self.weight = 1000
-        self.economy = 0.0;
+        self.economy = 0.0
         self.width = 70
         self.height = 20
         self.xPoint = 0
         self.yPoint = 0
+        self.currentSpeed = 0
+        self.vehiclePerformance = 0
+        self.isFinishingLap = true
+        self.ranking = 0
+        self.currentRunningLap = 1
         super.init(frame: .zero)
+        
+//        self.title = "\(brandName)"
+        self.vehiclePerformance = self.performance()
     }
 
     /**
        This constructor gets value from the user and sets the value
     */
-    required init(brandName: String, modelName: String, maximalSpeed: Double, weight: Int, fuel: Int, economy: Double) {
+    required init(brandName: String, modelName: String, maximalSpeed: Double, weight: Int, fuel: Double, economy: Double) {
         self.brandName = brandName
         self.modelName = modelName
         self.fuel = fuel
         self.weight = weight
-        self.fuel = fuel
         self.speed = maximalSpeed
         self.economy = economy
         self.width = 70
         self.height = 20
         self.xPoint = 0
         self.yPoint = 0
+        self.currentSpeed = 0
+        self.vehiclePerformance = 0
+        self.isFinishingLap = true
+        self.ranking = 0
+        self.currentRunningLap = 1
         super.init(frame: .zero)
-       
+        
+//        self.title = "\(brandName)"
+        self.vehiclePerformance = self.performance()
     }
     
     /**
@@ -81,6 +100,13 @@ class VehicleButton: NSButton {
     func performance(vehicle: VehicleButton) -> Double {
         return Double(vehicle.speed / Double(vehicle.weight))
     }
+    
+    /**
+        This method calculates the performance of a vehicle
+     */
+    func performance() -> Double {
+        return Double(self.speed / Double(self.weight))
+    }
         
     /**
         This method inits the protocol OnVehicleFinishProtocol
@@ -102,13 +128,18 @@ class VehicleButton: NSButton {
      */
     private func setXPoint(xPoint x: Int) {
         xPoint = x
-        if let onVehicleFinishProtocol = onVehicleFinishProtocol, xPoint >= 1000 {
+        if let onVehicleFinishProtocol = onVehicleFinishProtocol, xPoint >= 1000, isFinishingLap {
             onVehicleFinishProtocol.onFinished(vehicle: self)
+        }
+        
+        if let onVehicleFinishProtocol = onVehicleFinishProtocol, fuel <= 0 {
+            onVehicleFinishProtocol.onRaceFailed(vehicle: self)
         }
     }
     
     /**
         This method is to print the vehicle details
      */
-    func toString() {}
+    func toString() -> String { return ""}
+
 }

@@ -1,5 +1,5 @@
 //
-//  Rally.swift
+//  MotoType.swift
 //  RoadRash
 //
 //  Created by yadhukrishnan E on 22/10/19.
@@ -8,6 +8,6 @@
 
 import Cocoa
 
-protocol Rally {
-    func check(_ vehicles: [VehicleButton])
+enum MotoType {
+    
 }

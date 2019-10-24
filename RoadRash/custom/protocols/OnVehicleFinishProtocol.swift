@@ -10,5 +10,6 @@ import Cocoa
 
 protocol OnVehicleFinishProtocol {
     func onFinished(vehicle v: VehicleButton)
+    func onRaceFailed(vehicle v: VehicleButton)
 }
 
